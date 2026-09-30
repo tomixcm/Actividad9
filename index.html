@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Actividad 9 - JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        .contenedor {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .seccion {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #resultado {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Actividad 9</h1>
+
+        <div class="seccion">
+            <h2>Condicional ternario</h2>
+
+            <p>Ingresa la cantidad de cuotas:</p>
+
+            <input type="number" id="cuotas" placeholder="Ej: 5">
+
+            <button onclick="calcularCuotas()">
+                Comprobar
+            </button>
+
+            <p id="resultado"></p>
+        </div>
+
+
+        <div class="seccion">
+            <h2>Operador ||</h2>
+
+            <p>
+                Si no escribes nada, se utilizará el valor
+                <strong>10</strong> por defecto.
+            </p>
+
+            <input type="text" id="input-1" placeholder="Escribe un valor">
+
+            <button onclick="valorPorDefecto()">
+                Mostrar valor
+            </button>
+
+            <p id="resultadoInput"></p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Actividad 9:
+        // Operador ternario
+
+        function calcularCuotas() {
+
+            let cuotas = document.querySelector("#cuotas").value;
+
+            let resultado = cuotas >= 6
+                ? "Serán aplicados intereses en esta compra"
+                : "No serán aplicados intereses en esta compra";
+
+            document.querySelector("#resultado").textContent = resultado;
+        }
+
+
+        // Operador ||
+
+        function valorPorDefecto() {
+
+            let input = document.querySelector("#input-1").value || 10;
+
+            document.querySelector("#resultadoInput").textContent =
+                "Valor obtenido: " + input;
+        }
+
+    </script>
+
+</body>
+</html>
