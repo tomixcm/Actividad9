@@ -7,14 +7,10 @@ console.log(
 );
 
 
-// Uso del operador ||
-
 variable = "" || "hola";
 
 console.log(variable);
 
-
-// Uso de || con un input
 
 input = document.querySelector("#input-1").value || 10;
 
